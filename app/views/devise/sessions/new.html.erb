@@ -3,9 +3,12 @@
 
 <div class="form-wrapper">
   <h1>Sign In</h1>
+  <%# ログイン時のエラーメッセージ  %>
+  <div class='login-flash-message'>
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>
   <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-    <%# エラーメッセージを表示%>
-    <%#= render "devise/shared/error_messages", resource: resource %>
     <div class="form-item">
       <%= f.email_field :email, autofocus: true, placeholder: "Email" %>
     </div>
