@@ -1,5 +1,5 @@
 
-<%# 部分テンプレートでヘッダーを挿入%>
+<%= render 'shared/header' %>
 
 <div class="form-wrapper">
   <h1>Sign up</h1>
@@ -25,11 +25,11 @@
     <div class="button-panel">
       <%= f.submit "Sign up", class: "button" %>
     </div>
-    <div class="footer">
-      <p class="guideline">
+    <div class="form-footer">
+      <p class="form-guideline">
         このページで利用している株式会社スクウェア・エニックスを代表とする共同著作者が権利を所有する画像の転載・配布は禁止いたします。
       </p>
-      <p class="guideline">
+      <p class="form-guideline">
         (C) ARMOR PROJECT/BIRD STUDIO/SQUARE ENIX All Rights Reserved.
       </p>
     </div>
