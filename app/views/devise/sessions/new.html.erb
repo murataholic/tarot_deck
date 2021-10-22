@@ -2,21 +2,21 @@
 <%= render 'shared/header' %>
 
 <div class="form-wrapper">
-  <h1>Sign In</h1>
-  <%# ログイン時のエラーメッセージ  %>
+  <h1>ログイン</h1>
   <div class='login-flash-message'>
-    <%= flash[:notice] %>
     <%= flash[:alert] %>
   </div>
   <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
     <div class="form-item">
-      <%= f.email_field :email, autofocus: true, placeholder: "Email" %>
+      <label class="form-text">メールアドレス</label>
+      <%= f.email_field :email, autofocus: true %>
     </div>
     <div class="form-item">
-      <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+      <label class="form-text">パスワード</label>
+      <%= f.password_field :password, autocomplete: "off" %>
     </div>
     <div class="button-panel">
-      <%= f.submit "Log in", class: "button" %>
+      <%= f.submit "ログイン", class: "button" %>
     </div>
     <div class="form-footer">
       <p class="form-guideline">
