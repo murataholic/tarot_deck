@@ -1,0 +1,97 @@
+<%= render 'shared/header' %>  
+
+<div class="article-lists">
+  <% @articles.each do |article| %>
+    <div class="article-content">
+      <div class="description">
+      <% if @current_time < article.created_at.since(7.day) %>
+        <div class="ribbon20-wrapper">
+          <h3 class="ribbon20">NEW!</h3>
+        </div>
+      <% end %>
+        <div class="article-title">
+          <%= link_to article.title, article_path(article.id) %>
+        </div>
+        <div class="details"> <%# userテーブル作成後hogeの修正、created_atの日本語時間への変更を行う %>
+          <p class="date"><%= article.created_at %></p>
+          <p class="tags">テーマ：<%= article.genre.name %></p> 
+        </div>
+          <p class="author"><a href="#">by <%= "hoge" %></a></p>          
+        <div class="text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          <%= article.text %>
+        </div>
+        <%= link_to "Read More", article_path(article.id) %>
+      </div>
+      <div class="deck-tables">
+        <div class="grid-fit">
+          <div class="item" id="img1">
+            <%= image_tag "/tarots/#{article.deck.mons1}/#{article.deck.mons1}-#{article.deck.arc1}.png" %>
+          </div>
+          <div class="item" id="img2">
+            <%= image_tag "/tarots/#{article.deck.mons2}/#{article.deck.mons2}-#{article.deck.arc2}.png" %>        
+          </div>
+          <div class="item" id="img3">
+            <%= image_tag "/tarots/#{article.deck.mons3}/#{article.deck.mons3}-#{article.deck.arc3}.png" %>
+          </div>
+          <div class="item" id="img4">
+            <%= image_tag "/tarots/#{article.deck.mons4}/#{article.deck.mons4}-#{article.deck.arc4}.png" %>
+          </div>
+          <div class="item" id="img5">
+            <%= image_tag "/tarots/#{article.deck.mons5}/#{article.deck.mons5}-#{article.deck.arc5}.png" %>
+          </div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img6">image6
+            <%#= image_tag "/tarots/#{article.deck.monster1}/#{article.deck.monster1}-#{article.deck.arcanum1}.png" %>
+          </div>
+          <div class="item" id="img7">image7
+            <%#= image_tag "/tarots/#{article.deck.monster2}/#{article.deck.monster2}-#{article.deck.arcanum2}.png" %>        
+          </div>
+          <div class="item" id="img8">image8
+            <%#= image_tag "/tarots/#{article.deck.monster3}/#{article.deck.monster3}-#{article.deck.arcanum3}.png" %>
+          </div>
+          <div class="item" id="img9">image9
+            <%#= image_tag "/tarots/#{article.deck.monster4}/#{article.deck.monster4}-#{article.deck.arcanum4}.png" %>
+          </div>
+          <div class="item" id="img10">image10
+            <%#= image_tag "/tarots/#{article.deck.monster5}/#{article.deck.monster5}-#{article.deck.arcanum5}.png" %>
+          </div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img11">image11
+            <%#= image_tag "/tarots/#{article.deck.monster1}/#{article.deck.monster1}-#{article.deck.arcanum1}.png" %>
+          </div>
+          <div class="item" id="img12">image12
+            <%#= image_tag "/tarots/#{article.deck.monster2}/#{article.deck.monster2}-#{article.deck.arcanum2}.png" %>        
+          </div>
+          <div class="item" id="img13">image13
+            <%#= image_tag "/tarots/#{article.deck.monster3}/#{article.deck.monster3}-#{article.deck.arcanum3}.png" %>
+          </div>
+          <div class="item" id="img14">image14
+            <%#= image_tag "/tarots/#{article.deck.monster4}/#{article.deck.monster4}-#{article.deck.arcanum4}.png" %>
+          </div>
+          <div class="item" id="img15">image15
+            <%#= image_tag "/tarots/#{article.deck.monster5}/#{article.deck.monster5}-#{article.deck.arcanum5}.png" %>
+          </div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img16">image16
+            <%#= image_tag "/tarots/#{article.deck.monster1}/#{article.deck.monster1}-#{article.deck.arcanum1}.png" %>
+          </div>
+          <div class="item" id="img17">image17
+            <%#= image_tag "/tarots/#{article.deck.monster2}/#{article.deck.monster2}-#{article.deck.arcanum2}.png" %>        
+          </div>
+          <div class="item" id="img18">image18
+            <%#= image_tag "/tarots/#{article.deck.monster3}/#{article.deck.monster3}-#{article.deck.arcanum3}.png" %>
+          </div>
+          <div class="item" id="img19">image19
+            <%#= image_tag "/tarots/#{article.deck.monster4}/#{article.deck.monster4}-#{article.deck.arcanum4}.png" %>
+          </div>
+          <div class="item" id="img20">image20
+            <%#= image_tag "/tarots/#{article.deck.monster5}/#{article.deck.monster5}-#{article.deck.arcanum5}.png" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
