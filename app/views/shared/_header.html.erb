@@ -1,14 +1,14 @@
 <header>
   <h1>
-    <a  class="link" href="/">ドラゴンクエストX 占い師デッキレシピ集</a>
+    <%= link_to "ドラゴンクエストＸ 占い師デッキレシピ集", root_path %>
   </h1>
   <div class="global-nav">
     <ul class="nav-bar">
-      <li><%= link_to "投稿する", new_article_path, class:"post" %></li>
+      <li><%#= link_to "投稿する", new_article_path, class:"post" %></li>
       <li><a href="#">検索する</a></li>
       <%# ユーザーのログイン状態で表示を分ける ユーザー名 ログアウト %>
-      <li><a href="#">新規登録</a></li>
-      <li><a href="#">ログイン</a></li>
+      <li><%= link_to "新規登録", new_user_registration_path %></li>
+      <li><%= link_to "ログイン", new_user_session_path %></li>
     </ul>
   </div>
 </header>
