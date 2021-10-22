@@ -2,6 +2,6 @@ ja:
   activerecord:
     attributes:
       user:
-        nickname: 名前
+        nickname: ニックネーム
       article:
         text: テキスト
