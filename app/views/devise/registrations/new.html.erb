@@ -1,0 +1,46 @@
+
+<%= render 'shared/header' %>
+
+<div class="form-wrapper">
+  <h1>新規登録フォーム</h1>
+  <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="form-item">
+      <label class="form-text">ニックネーム</label>
+      <span class="indispensable">必須</span>
+      <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
+      <p class='info-text'>※6文字以内のひらがな･カタカナで入力してください（「ヴ」「ゔ」は使用不可）</p>
+    </div>
+
+    <div class="form-item">
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+      <%= f.email_field :email %>
+    </div>
+
+    <div class="form-item">
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+      <%= f.password_field :password, autocomplete: "off" %>
+      <p class='info-text'>※6文字以上の半角英数字で入力してください（記号も入力可）</p>
+    </div>
+
+    <div class="form-item">
+      <label class="form-text">パスワード（確認）</label>
+      <span class="indispensable">必須</span>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+
+    <div class="button-panel">
+      <%= f.submit "登録する", class: "button" %>
+    </div>
+    <div class="form-footer">
+      <p class="form-guideline">
+        このページで利用している株式会社スクウェア・エニックスを代表とする共同著作者が権利を所有する画像の転載・配布は禁止いたします。
+      </p>
+      <p class="form-guideline">
+        (C) ARMOR PROJECT/BIRD STUDIO/SQUARE ENIX All Rights Reserved.
+      </p>
+    </div>
+  <% end %>
+</div>
