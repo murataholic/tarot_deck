@@ -72,7 +72,7 @@ screen_flow.dioを参照。
 | Column | Type       | Options                        |
 | -------| ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true |
-| item   | references | null: false, foreign_key: true |
+| article| references | null: false, foreign_key: true |
 | arc1   | integer    | null: false                    |
 | arc2   | integer    | null: false                    |
 | arc3   | integer    | null: false                    |
