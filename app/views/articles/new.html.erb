@@ -1,0 +1,73 @@
+<%= render 'shared/header' %>
+
+
+<div class="article-lists">
+  <%= form_with model: @article_deck, url:articles_path, local: true do |f| %>
+
+  <%= render 'shared/error_messages', model: f.object %>
+    <div class="article-content">
+      <div class="description">
+        <div class="title">
+          <%= f.text_field :title, class:"title-form", placeholder:"タイトルを入力" %>
+        </div>
+        <div class="genre">
+          <%= f.collection_select(:genre, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+        </div>
+        <%= f.text_area :text, class:"text", id:"article_text" %>
+        <div class="word-count">
+        <p class="text-caution">※2000文字以内でご記入ください。</p>
+        <p class="text-length" >現在<span id="char_num">0</span>文字</p>
+        </div>
+      </div>
+      <div class="deck-tables">
+        <div class="grid-fit">
+          <div class="item" id="img1">image1</div>
+          <div class="item" id="img2">image2</div>
+          <div class="item" id="img3">image3</div>
+          <div class="item" id="img4">image4</div>
+          <div class="item" id="img5">image5</div>
+        </div>
+        <div class="select-tabs">
+          <div class="monster-fit">
+            <%= f.collection_select(:mons1, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons2, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons3, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons4, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons5, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+          </div>
+          <div class="arcana-fit">
+            <%= f.collection_select(:arc1, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc2, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
+            <%= f.collection_select(:arc3, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc4, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc5, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+          </div>
+        </div>
+
+        <div class="grid-fit">
+          <div class="item" id="img6">image6</div>
+          <div class="item" id="img7">image7</div>
+          <div class="item" id="img8">image8</div>
+          <div class="item" id="img9">image9</div>
+          <div class="item" id="img10">image10</div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img11">image11</div>
+          <div class="item" id="img12">image12</div>
+          <div class="item" id="img13">image13</div>
+          <div class="item" id="img14">image14</div>
+          <div class="item" id="img15">image15</div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img16">image16</div>
+          <div class="item" id="img17">image17</div>
+          <div class="item" id="img18">image18</div>
+          <div class="item" id="img19">image19</div>
+          <div class="item" id="img20">image20</div>
+        </div>
+      </div>
+    </div>
+    <%= f.submit "投稿する", id: "submit", class:"btn" %>
+  <% end %>
+</div>
+
