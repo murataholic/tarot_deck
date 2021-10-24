@@ -3,7 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
+  
+  has_many :articles
+  has_many :decks
   validates :nickname, presence: true,
                        format: { with: /\A[ぁ-んァ-ヶー－〜・]+\z/, message: 'は6文字以内のひらがな･カタカナで入力してください' }
 

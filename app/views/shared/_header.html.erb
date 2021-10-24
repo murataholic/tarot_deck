@@ -5,7 +5,7 @@
   <div class="global-nav">
     <ul class="nav-bar">
       <li><%= link_to "検索する", "#" %></li>
-      <li><%= link_to "投稿する", "#", class:"post" %></li>
+      <li><%= link_to "投稿する", new_article_path, class:"post" %></li>
       <% if user_signed_in? %>
         <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
