@@ -1,5 +1,4 @@
 class Deck < ApplicationRecord
-  belongs_to :user
   belongs_to :article
 
   include ActiveHash::Associations
