@@ -1,7 +1,6 @@
 class CreateDecks < ActiveRecord::Migration[6.0]
   def change
     create_table :decks do |t|
-      t.references :user, null: false, foreign_key: true
       t.references :article, null: false, foreign_key: true
       t.integer :arc1,   null: false
       t.integer :arc2,   null: false
