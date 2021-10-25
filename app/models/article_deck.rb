@@ -1,25 +1,38 @@
 class ArticleDeck
   include ActiveModel::Model
-  attr_accessor :title, :text, :mons1, :mons2, :mons3, :mons4, :mons5,
-                :arc1, :arc2, :arc3, :arc4, :arc5, :article_id, :genre
+  attr_accessor :title, :text, :article_id, :user_id, :genre,
+                :mons1, :mons2, :mons3, :mons4, :mons5, :mons6, :mons7, :mons8, :mons9, :mons10,
+                :mons11, :mons12, :mons13, :mons14, :mons15, :mons16, :mons17, :mons18, :mons19, :mons20,
+                :arc1, :arc2, :arc3, :arc4, :arc5, :arc6, :arc7, :arc8, :arc9, :arc10,
+                :arc11, :arc12, :arc13, :arc14, :arc15, :arc16, :arc17, :arc18, :arc19, :arc20
 
   with_options numericality: {other_than: 0, message: "can't be blank" } do
-    validates :arc1, :arc2, :arc3, :arc4, :arc5
+    validates :genre, :arc1, :arc2, :arc3, :arc4, :arc5, :arc6, :arc7, :arc8, :arc9, :arc10,
+              :arc11, :arc12, :arc13, :arc14, :arc15, :arc16, :arc17, :arc18, :arc19, :arc20
   end
   
   with_options numericality: { 
-    other_than: 0, other_than: 1, other_than: 21, other_than: 42, other_than: 63,
+    other_than: 0, other_than: 1, other_than: 12, other_than: 21, other_than: 42, other_than: 63,
     message: "can't be blank" } do
-    validates :mons1, :mons2, :mons3, :mons4, :mons5
+    validates :mons1, :mons2, :mons3, :mons4, :mons5, :mons6, :mons7, :mons8, :mons9, :mons10,
+              :mons11, :mons12, :mons13, :mons14, :mons15, :mons16, :mons7, :mons8, :mons9, :mons20
   end
 
-  validates :title, :text, presence: true
-  validates :genre, numericality: { other_than: 0, message: "can't be blank" } 
+  validates :user_id, :title, :text, presence: true
 
   def save
-    article = Article.create(title: title, text: text, genre_id: genre)
-    Deck.create(mons1: mons1, mons2: mons2, mons3: mons3, mons4: mons4, mons5: mons5,
-                arc1: arc1, arc2: arc2, arc3: arc3, arc4: arc4, arc5: arc5, article_id: article.id)
+    article = Article.create(user_id: user_id, title: title, genre_id: genre, text: text)
+    Deck.create(
+      mons1: mons1, mons2: mons2, mons3: mons3, mons4: mons4, mons5: mons5,
+      mons6: mons6, mons7: mons7, mons8: mons8, mons9: mons9, mons10: mons10,
+      mons11: mons11, mons12: mons12, mons13: mons13, mons14: mons14, mons15: mons15,
+      mons16: mons16, mons17: mons17, mons18: mons18, mons19: mons19, mons20: mons20,
+      arc1: arc1, arc2: arc2, arc3: arc3, arc4: arc4, arc5: arc5,
+      arc6: arc6, arc7: arc7, arc8: arc8, arc9: arc9, arc10: arc10,
+      arc11: arc11, arc12: arc12, arc13: arc13, arc14: arc14, arc15: arc15,
+      arc16: arc16, arc17: arc17, arc18: arc18, arc19: arc19, arc20: arc20,
+      article_id: article.id
+    )
   end
 
   validate :text_length_check
@@ -35,7 +48,8 @@ class ArticleDeck
 
   def arcana_check
     count_arcana = {}
-    arcana = [ arc1, arc2, arc3, arc4, arc5 ]
+    arcana = [ arc1, arc2, arc3, arc4, arc5, arc6, arc7, arc8, arc9, arc10,
+      arc11, arc12, arc13, arc14, arc15, arc16, arc17, arc18, arc19, arc20 ]
     return calc_arcana(arcana, count_arcana)
   end
 
@@ -62,7 +76,8 @@ class ArticleDeck
 
   def monster_check
     count_monsters = {}
-    monsters = [ mons1, mons2, mons3, mons4, mons5 ]
+    monsters = [ mons1, mons2, mons3, mons4, mons5, mons6, mons7, mons8, mons9, mons10,
+      mons11, mons12, mons13, mons14, mons15, mons16, mons17, mons18, mons19, mons20 ]
     return calc_monsters(monsters, count_monsters)
   end
 
@@ -77,12 +92,12 @@ class ArticleDeck
         if v > 1
           return error_message
         end
-      when "13", "14", "15", "16", "17", "18", "19", "34", "35", "53", "62", "64"
+      when "13", "14", "15", "16", "17", "18", "19", "35", "36", "53", "62", "64"
         if v > 2
           return error_message
         end
       else
-        if n > 5
+        if v > 5
           return error_message
         end
       end
@@ -90,7 +105,7 @@ class ArticleDeck
   end
 
   def error_message
-    errors[:base] << "エラー：登録できません。デッキを修正してください。"
+    errors[:base] << "登録できません。デッキを修正してください。"
   end
 
 end
