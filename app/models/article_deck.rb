@@ -33,12 +33,20 @@ class ArticleDeck
     )
   end
 
+  validate :title_length_check
+
+  def title_length_check
+    if title.length > 30
+      errors.add(:title, "は30文字以内でご記入ください。")
+    end
+  end
+
   validate :text_length_check
  
   def text_length_check
     text_validation = text.gsub(/\r\n/,"1")
     if text_validation.length > 2000
-      errors.add(:text, "は2000字以内で入力してください。")
+      errors.add(:text, "は2000文字以内でご記入ください。")
     end
   end
 

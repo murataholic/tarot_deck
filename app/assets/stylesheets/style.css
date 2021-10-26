@@ -166,12 +166,11 @@ align-items: center;
 .title-form {
   height: 30px;
   min-width: 100%;
-  margin: 20px 0 20px;
+  margin: 20px 0 0;
 }
 
 .genre-select {
   height: 30px;
-  color: gray;
 }
 
 .text{
@@ -192,8 +191,12 @@ align-items: center;
   justify-content: space-between;
 }
 
+.text-caution{
+  margin-top: 0;
+}
+
 .text-length{
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 
 .monster-fit, .arcana-fit{

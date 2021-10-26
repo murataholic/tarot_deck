@@ -7,15 +7,16 @@
     <div class="article-content">
       <div class="description">
         <div class="title">
-          <%= f.text_field :title, class:"title-form", placeholder:"タイトルを入力" %>
+          <%= f.text_field :title, class:"title-form" %>
+          <p class="text-caution">※タイトルは30文字以内でご記入ください。</p>
         </div>
         <div class="genre">
           <%= f.collection_select(:genre, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
         </div>
         <%= f.text_area :text, class:"text", id:"article_text" %>
         <div class="word-count">
-        <p class="text-caution">※2000字以内でご記入ください。</p>
-        <p class="text-length" >現在<span id="char_num">0</span>文字</p>
+          <p class="text-caution">※2000文字以内でご記入ください。</p>
+          <p class="text-length" >現在<span id="char_num">0</span>文字</p>
         </div>
       </div>
       <div class="deck-tables">
