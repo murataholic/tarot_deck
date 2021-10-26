@@ -1,6 +1,5 @@
 <%= render 'shared/header' %>
 
-
 <div class="article-lists">
   <%= form_with model: @article_deck, url:articles_path, local: true do |f| %>
 
@@ -15,7 +14,7 @@
         </div>
         <%= f.text_area :text, class:"text", id:"article_text" %>
         <div class="word-count">
-        <p class="text-caution">※2000文字以内でご記入ください。</p>
+        <p class="text-caution">※2000字以内でご記入ください。</p>
         <p class="text-length" >現在<span id="char_num">0</span>文字</p>
         </div>
       </div>
@@ -51,6 +50,22 @@
           <div class="item" id="img9">image9</div>
           <div class="item" id="img10">image10</div>
         </div>
+        <div class="select-tabs">
+          <div class="monster-fit">
+            <%= f.collection_select(:mons6, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons7, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons8, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons9, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons10, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+          </div>
+          <div class="arcana-fit">
+            <%= f.collection_select(:arc6, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc7, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
+            <%= f.collection_select(:arc8, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc9, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc10, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+          </div>
+        </div>
         <div class="grid-fit">
           <div class="item" id="img11">image11</div>
           <div class="item" id="img12">image12</div>
@@ -58,12 +73,44 @@
           <div class="item" id="img14">image14</div>
           <div class="item" id="img15">image15</div>
         </div>
+        <div class="select-tabs">
+          <div class="monster-fit">
+            <%= f.collection_select(:mons11, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons12, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons13, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons14, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons15, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+          </div>
+          <div class="arcana-fit">
+            <%= f.collection_select(:arc11, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc12, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
+            <%= f.collection_select(:arc13, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc14, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc15, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+          </div>
+        </div>
         <div class="grid-fit">
           <div class="item" id="img16">image16</div>
           <div class="item" id="img17">image17</div>
           <div class="item" id="img18">image18</div>
           <div class="item" id="img19">image19</div>
           <div class="item" id="img20">image20</div>
+        </div>
+        <div class="select-tabs">
+          <div class="monster-fit">
+            <%= f.collection_select(:mons16, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons17, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons18, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons19, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons20, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+          </div>
+          <div class="arcana-fit">
+            <%= f.collection_select(:arc16, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc17, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
+            <%= f.collection_select(:arc18, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc19, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc20, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+          </div>
         </div>
       </div>
     </div>

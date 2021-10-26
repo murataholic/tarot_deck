@@ -5,10 +5,10 @@ const deck = () => {
     const textLength = articleText.value.length;
     const charNum = document.getElementById("char_num");
     charNum.innerHTML = `${textLength}`;
-    if(articleText.value.length > 3000){
+    if(articleText.value.length > 2000){
       charNum.setAttribute("style", "color: red;")
     }
-    if(articleText.value.length <= 3000){
+    if(articleText.value.length <= 2000){
       charNum.removeAttribute("style", "color: black;")
     }
   });

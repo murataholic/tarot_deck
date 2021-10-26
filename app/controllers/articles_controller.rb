@@ -9,9 +9,7 @@ class ArticlesController < ApplicationController
 
 
   def create
-    binding.pry
     @article_deck = ArticleDeck.new(article_params)
-    validation_check
     if @article_deck.valid?
       @article_deck.save
       redirect_to root_path
@@ -31,9 +29,4 @@ class ArticlesController < ApplicationController
     ).merge(user_id: current_user.id)
   end
 
-  def validation_check
-    @article_deck.text_length_check
-    @article_deck.arcana_check
-    @article_deck.monster_check
-  end
 end
