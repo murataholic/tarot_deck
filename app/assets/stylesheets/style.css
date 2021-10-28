@@ -97,6 +97,7 @@ form {
   font-size: smaller;
 }
 
+/* Footer Layout */
 .wrapper{
   min-height: 1vh;
   position: relative;
@@ -117,3 +118,108 @@ form {
 .guideline {
   font-size: 12px;
 }
+
+/* new.html.erb Layout */
+.article-body{
+  border:1px solid #ccc;
+  width: 500px;
+}
+.grid-fit{
+width: 500px;
+margin-left: auto;
+padding: 5px;
+border: 1px solid #ee8392;
+display: flex;
+grid-gap: 10px;  
+}
+
+.item {
+height: 130px;
+width: 90px;
+border:1px solid #ccc;
+background-color: #fff;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+.article-box {
+  height:200px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.article-content{
+  border: solid 1px ;
+  margin-bottom: 10px;
+  padding: 10px;
+  max-width: 1180px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr;
+  overflow: scroll;
+}
+
+.title-form {
+  height: 30px;
+  min-width: 100%;
+  margin: 20px 0 0;
+}
+
+.genre-select {
+  height: 30px;
+}
+
+.text{
+  margin-top: 20px;
+  padding: 5px;
+  border: 1px solid gray;
+  font-size: 15px;
+  line-height: 1.4;
+  min-width: 595px;
+  height: 540px;
+  white-space: pre-wrap;
+  overflow: scroll;
+  resize: none;
+}
+
+.word-count{
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-caution{
+  margin-top: 0;
+}
+
+.text-length{
+  margin: 0 10px 0 0;
+}
+
+.monster-fit, .arcana-fit{
+  display: flex;
+  justify-content: center;
+  margin-left: 55px;
+}
+.mons-select, .arc-select {
+  font-size: 8px;
+  width: 90px;
+  margin: 0 5px;
+}
+
+.select-tabs {
+  margin: 5px 0 5px;
+}
+
+.btn {
+  width: 200px;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: orange;
+  color: white;
+}
+

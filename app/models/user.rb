@@ -4,8 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :articles
   validates :nickname, presence: true,
-                       format: { with: /\A[ぁ-んァ-ヶー－〜・]+\z/, message: 'は6文字以内のひらがな･カタカナで入力してください' }
+                       format: { with: /\A[ぁ-んァ-ヴー－〜・]+\z/, message: 'は6文字以内のひらがな･カタカナで入力してください' }
 
-  validates :password, format: { with: /\A[a-zA-Z0-9!#$%&()*+,.:;=?@\[\]^_{}-]+\z/, message: 'が不正な値です' }
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/, message: 'は半角英数字で入力してください' }
 end

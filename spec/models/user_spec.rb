@@ -10,8 +10,8 @@ RSpec.describe User, type: :model do
       it '入力欄に空欄がなく、入力不備がなければ登録できる' do
         expect(@user).to be_valid
       end
-      it 'nicknameに「〜」や「・」が含まれていても登録できる' do
-        @user.nickname = 'ザ・ピ〜ス'
+      it 'nicknameに「ヴ」や「〜」「・」が含まれていても登録できる' do
+        @user.nickname = 'ザ・ヴァ〜ス'
         expect(@user).to be_valid
       end
     end
@@ -21,11 +21,6 @@ RSpec.describe User, type: :model do
         @user.nickname = ''
         @user.valid?
         expect(@user.errors.full_messages).to include('ニックネームを入力してください')
-      end
-      it 'nicknameに「ゔ」「ヴ」が含まれる場合は登録できない' do
-        @user.nickname = 'ヴィゔぁ'
-        @user.valid?
-        expect(@user.errors.full_messages).to include('ニックネームは6文字以内のひらがな･カタカナで入力してください')
       end
       it 'nicknameに全角記号が含まれる場合は登録できない' do
         @user.nickname = '！？＠＄％＃'
@@ -80,7 +75,13 @@ RSpec.describe User, type: :model do
         @user.password = 'ほげほげhoge1'
         @user.password_confirmation = 'ほげほげhoge1'
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードが不正な値です')
+        expect(@user.errors.full_messages).to include('パスワードは半角英数字で入力してください')
+      end
+      it 'passwordに記号が含まれる場合は登録できない' do
+        @user.password = '#$%&+*'
+        @user.password_confirmation = '#$%&+*'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('パスワードは半角英数字で入力してください')
       end
     end
   end
