@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :article_deck do
-    title  { "タイトル" }
+    title  { 'タイトル' }
     genre  { 1 }
     text   { Faker::Number.number(digits: 10) }
     arc1   { 1 }

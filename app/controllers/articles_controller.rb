@@ -8,7 +8,6 @@ class ArticlesController < ApplicationController
     @article_deck = ArticleDeck.new
   end
 
-
   def create
     @article_deck = ArticleDeck.new(article_params)
     if @article_deck.valid?
@@ -29,5 +28,4 @@ class ArticlesController < ApplicationController
       :arc11, :arc12, :arc13, :arc14, :arc15, :arc16, :arc17, :arc18, :arc19, :arc20
     ).merge(user_id: current_user.id)
   end
-
 end
