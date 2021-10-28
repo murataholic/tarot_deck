@@ -6,17 +6,20 @@ class ArticleDeck
                 :arc1, :arc2, :arc3, :arc4, :arc5, :arc6, :arc7, :arc8, :arc9, :arc10,
                 :arc11, :arc12, :arc13, :arc14, :arc15, :arc16, :arc17, :arc18, :arc19, :arc20
 
-  with_options numericality: {other_than: 0, message: "を選択してください。" } do
-    validates :genre, :arc1, :arc2, :arc3, :arc4, :arc5, :arc6, :arc7, :arc8, :arc9, :arc10,
-              :arc11, :arc12, :arc13, :arc14, :arc15, :arc16, :arc17, :arc18, :arc19, :arc20
-  end
-  
-  with_options numericality: { other_than: 0, message: "を選択してください。" } do
-    validates :mons1, :mons2, :mons3, :mons4, :mons5, :mons6, :mons7, :mons8, :mons9, :mons10,
-              :mons11, :mons12, :mons13, :mons14, :mons15, :mons16, :mons17, :mons18, :mons19, :mons20
-  end
+  with_options presence: true do
+    validates :user_id, :title, :text
 
-  validates :user_id, :title, :text, presence: true
+    with_options numericality: {other_than: 0, message: "を選択してください" } do
+      validates :genre, :arc1, :arc2, :arc3, :arc4, :arc5, :arc6, :arc7, :arc8, :arc9, :arc10,
+                :arc11, :arc12, :arc13, :arc14, :arc15, :arc16, :arc17, :arc18, :arc19, :arc20
+    end
+  
+    with_options numericality: { other_than: 0, message: "を選択してください" } do
+      validates :mons1, :mons2, :mons3, :mons4, :mons5, :mons6, :mons7, :mons8, :mons9, :mons10,
+                :mons11, :mons12, :mons13, :mons14, :mons15, :mons16, :mons17, :mons18, :mons19, :mons20
+    end
+
+  end
 
   def save
     article = Article.create(user_id: user_id, title: title, genre_id: genre, text: text)
@@ -36,17 +39,16 @@ class ArticleDeck
   validate :title_length_check
 
   def title_length_check
-    if title.length > 30
-      errors.add(:title, "は30文字以内でご記入ください。")
+    if title.to_s.length > 30
+      errors.add(:title, "は30文字以内でご記入ください")
     end
   end
 
   validate :text_length_check
  
   def text_length_check
-    text_validation = text.gsub(/\r\n/,"1")
-    if text_validation.length > 2000
-      errors.add(:text, "は2000文字以内でご記入ください。")
+    if text.to_s.length > 2000
+      errors.add(:text, "は2000文字以内でご記入ください")
     end
   end
 
@@ -115,11 +117,11 @@ class ArticleDeck
   end
 
   def arcana_error
-    errors[:base] << "登録できません。アルカナを修正してください。"
+    errors[:base] << "登録できません。アルカナを修正してください"
   end
 
   def monsters_error
-    errors[:base] << "登録できません。モンスターを修正してください。"
+    errors[:base] << "登録できません。モンスターを修正してください"
   end
 
 end
