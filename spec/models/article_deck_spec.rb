@@ -50,7 +50,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc1が空の場合、保存できない' do
           @article_deck.arc1 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc1を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc1を選択してください')
         end
         it 'arc1が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc1 = '0'
@@ -150,7 +150,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc6が空の場合、保存できない' do
           @article_deck.arc6 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc6を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc6を選択してください')
         end
         it 'arc6が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc6 = '0'
@@ -170,7 +170,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc7が空の場合、保存できない' do
           @article_deck.arc7 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc7を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc7を選択してください')
         end
         it 'arc7が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc7 = '0'
@@ -190,7 +190,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc8が空の場合、保存できない' do
           @article_deck.arc8 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc8を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc8を選択してください')
         end
         it 'arc8が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc8 = '0'
@@ -210,7 +210,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc9が空の場合、保存できない' do
           @article_deck.arc9 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc9を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc9を選択してください')
         end
         it 'arc9が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc9 = '0'
@@ -230,7 +230,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc10が空の場合、保存できない' do
           @article_deck.arc10 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc10を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc10を選択してください')
         end
         it 'arc10が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc10 = '0'
@@ -247,11 +247,11 @@ RSpec.describe ArticleDeck, type: :model do
           @article_deck.valid?
           expect(@article_deck.errors.full_messages).to include('Mons10を選択してください')
         end
-        #//
+        # //
         it 'arc11が空の場合、保存できない' do
           @article_deck.arc11 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc11を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc11を選択してください')
         end
         it 'arc11が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc11 = '0'
@@ -351,7 +351,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc16が空の場合、保存できない' do
           @article_deck.arc16 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc16を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc16を選択してください')
         end
         it 'arc16が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc16 = '0'
@@ -371,7 +371,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc17が空の場合、保存できない' do
           @article_deck.arc17 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc17を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc17を選択してください')
         end
         it 'arc17が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc17 = '0'
@@ -391,7 +391,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc18が空の場合、保存できない' do
           @article_deck.arc18 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc18を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc18を選択してください')
         end
         it 'arc18が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc18 = '0'
@@ -411,7 +411,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc19が空の場合、保存できない' do
           @article_deck.arc19 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc19を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc19を選択してください')
         end
         it 'arc19が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc19 = '0'
@@ -431,7 +431,7 @@ RSpec.describe ArticleDeck, type: :model do
         it 'arc20が空の場合、保存できない' do
           @article_deck.arc20 = ''
           @article_deck.valid?
-          expect(@article_deck.errors.full_messages).to include("Arc20を選択してください")
+          expect(@article_deck.errors.full_messages).to include('Arc20を選択してください')
         end
         it 'arc20が初期値(「アルカナを選択」)の場合、保存できない' do
           @article_deck.arc20 = '0'
@@ -451,7 +451,7 @@ RSpec.describe ArticleDeck, type: :model do
       end
       context '制限枚数に関する不備' do
         it 'モンスター名にランクが指定されている(id値が1, 12, 21, 42, 63)場合、保存できない' do
-          id_check = ["1", "12", "21", "42", "63"]
+          id_check = %w[1 12 21 42 63]
           id_check.each do |n|
             @article_deck.mons1 = n
             @article_deck.valid?
@@ -459,7 +459,7 @@ RSpec.describe ArticleDeck, type: :model do
           end
         end
         it '制限枚数1枚までのモンスター(id値が2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20)が2枚以上含まれる場合、保存できない' do
-          id_check = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "20"]
+          id_check = %w[2 3 4 5 6 7 8 9 10 11 20]
           id_check.each do |n|
             @article_deck.mons1 = n
             @article_deck.mons2 = n
@@ -468,7 +468,7 @@ RSpec.describe ArticleDeck, type: :model do
           end
         end
         it '制限枚数2枚までのモンスター(id値が13, 14, 15, 16, 17, 18, 19, 35, 36, 53, 62, 64)が3枚以上含まれる場合、保存できない' do
-          id_check = ["13", "14", "15", "16", "17", "18", "19", "35", "36", "53", "62", "64"]
+          id_check = %w[13 14 15 16 17 18 19 35 36 53 62 64]
           id_check.each do |n|
             @article_deck.mons1 = n
             @article_deck.mons2 = n
@@ -478,9 +478,9 @@ RSpec.describe ArticleDeck, type: :model do
           end
         end
         it '制限枚数5枚までのモンスター(id値が上記以外)が6枚以上含まれる場合' do
-          id_check = [
-            "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "37", "38", "39", "40", "41",
-            "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "54", "55", "56", "57", "58", "59", "60", "61"
+          id_check = %w[
+            22 23 24 25 26 27 28 29 30 31 32 33 34 37 38 39 40 41
+            43 44 45 46 47 48 49 50 51 52 54 55 56 57 58 59 60 61
           ]
           id_check.each do |n|
             @article_deck.mons1 = n
@@ -494,7 +494,7 @@ RSpec.describe ArticleDeck, type: :model do
           end
         end
         it '制限枚数2枚までのアルカナ(id値が1, 2, 3, 5, 8, 11, 15, 16, 17, 21)が3枚以上含まれる場合' do
-          id_check = ["1", "2", "3", "5", "8", "11", "15", "16", "17", "21"]
+          id_check = %w[1 2 3 5 8 11 15 16 17 21]
           id_check.each do |n|
             @article_deck.arc1 = n
             @article_deck.arc2 = n
@@ -504,7 +504,7 @@ RSpec.describe ArticleDeck, type: :model do
           end
         end
         it '制限枚数4枚までのアルカナ(id値が上記以外)が5枚以上含まれる場合' do
-          id_check = ["4", "6", "7", "9", "10", "12", "13", "14", "18", "19", "20", "22"]
+          id_check = %w[4 6 7 9 10 12 13 14 18 19 20 22]
           id_check.each do |n|
             @article_deck.arc1 = n
             @article_deck.arc2 = n
