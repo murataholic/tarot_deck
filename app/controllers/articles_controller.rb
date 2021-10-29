@@ -22,6 +22,11 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def destroy
+    @article = Article.find(params[:id])
+    redirect_to action: :index if @article.destroy
+  end
+
   private
 
   def article_params
