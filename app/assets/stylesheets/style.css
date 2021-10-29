@@ -214,14 +214,7 @@ align-items: center;
   margin: 5px 0 5px;
 }
 
-.btn {
-  width: 200px;
-  margin-top: 20px;
-  padding: 15px;
-  border: 1px solid white;
-  background-color: orange;
-  color: white;
-}
+
 
 /* show.html.erb Layout */
 .article-footer {
@@ -229,15 +222,16 @@ align-items: center;
   display: inline-block;
 }
 
-.edit-btn, .delete-btn {
+.btn, .delete-btn {
   color: #fff;
   background-color: orange;
   padding: 0.5rem 2rem;
   font-size: 0.8rem;
   margin-right: 1em;
+  border: none;
 }
 
-.edit-btn:hover {
+.btn:hover {
   color: #fff;
   background: darkorange;
 }

@@ -115,7 +115,11 @@
         </div>
       </div>
     </div>
-    <%= f.submit "投稿する", id: "submit", class:"btn" %>
+    
+    <div class="article-footer">
+      <%= f.submit "投稿する", id: "submit", class:"btn btn-radius" %>
+    </div>
   <% end %>
 </div>
 
+<%= render 'shared/footer' %>

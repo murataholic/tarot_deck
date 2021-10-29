@@ -1,4 +1,4 @@
-<%= render 'shared/header' %>  
+<%= render 'shared/header' %>
 
 <div class="article-lists">
     <div class="article-content">
@@ -95,10 +95,10 @@
     
     <% if user_signed_in? && current_user == @article.user %>
       <div class="article-footer">
-        <%= link_to "編集する", "#", id: "edit", class: "edit-btn btn-radius" %>
+        <%= link_to "編集する", "#", id: "edit", class: "btn btn-radius" %>
         <%= link_to "削除する", article_path, method: :delete, id: "delete", class: "delete-btn btn-radius" %>
         <p class="form-guideline">
-        ※ 「削除」ボタンを押すと記事が即時削除されます。復元できませんので十分ご注意ください。
+        ※「削除する」ボタンを押すと記事が即時削除されます。復元できませんので十分ご注意ください。
         </p>
       </div>
     <% end %>
