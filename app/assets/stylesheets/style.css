@@ -223,3 +223,30 @@ align-items: center;
   color: white;
 }
 
+/* show.html.erb Layout */
+.article-footer {
+  margin: 10px;
+  display: inline-block;
+}
+
+.edit-btn, .delete-btn {
+  color: #fff;
+  background-color: orange;
+  padding: 0.5rem 2rem;
+  font-size: 0.8rem;
+  margin-right: 1em;
+}
+
+.edit-btn:hover {
+  color: #fff;
+  background: darkorange;
+}
+
+.delete-btn:hover {
+  color: #fff;
+  background: crimson;
+}
+
+.btn-radius {
+   border-radius: 100vh;
+}
