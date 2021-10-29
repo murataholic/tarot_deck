@@ -1,0 +1,107 @@
+<%= render 'shared/header' %>  
+
+<div class="article-lists">
+    <div class="article-content">
+      <div class="description">
+      <%# if @current_time < article.created_at.since(7.day) %>
+        <div class="ribbon20-wrapper">
+          <h3 class="ribbon20">NEW!</h3>
+        </div>
+      <%# end %>
+        <div class="article-title">
+          <%= @article.title %>
+        </div>
+        <div class="details">
+          <p class="date"><%= @article.created_at.to_s(:datetime_jp) %></p>
+          <p class="tags">テーマ：<%= @article.genre.name %></p> 
+        </div>
+          <p class="author"><a href="#">by <%= @article.user.nickname %></a></p>          
+        <div class="text">
+          <%= @article.text %>
+        </div>
+        <%#= link_to "Read More", article_path(article.id) %>
+      </div>
+      <div class="deck-tables">
+        <div class="grid-fit">
+          <div class="item" id="img1">
+            <%= image_tag "/tarots/#{@article.deck.mons1}/#{@article.deck.mons1}-#{@article.deck.arc1}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img2">
+            <%= image_tag "/tarots/#{@article.deck.mons2}/#{@article.deck.mons2}-#{@article.deck.arc2}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img3">
+            <%= image_tag "/tarots/#{@article.deck.mons3}/#{@article.deck.mons3}-#{@article.deck.arc3}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img4">
+            <%= image_tag "/tarots/#{@article.deck.mons4}/#{@article.deck.mons4}-#{@article.deck.arc4}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img5">
+            <%= image_tag "/tarots/#{@article.deck.mons5}/#{@article.deck.mons5}-#{@article.deck.arc5}.png", alt: 'tarot' %>
+          </div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img6">
+            <%= image_tag "/tarots/#{@article.deck.mons6}/#{@article.deck.mons6}-#{@article.deck.arc6}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img7">
+            <%= image_tag "/tarots/#{@article.deck.mons7}/#{@article.deck.mons7}-#{@article.deck.arc7}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img8">
+            <%= image_tag "/tarots/#{@article.deck.mons8}/#{@article.deck.mons8}-#{@article.deck.arc8}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img9">
+            <%= image_tag "/tarots/#{@article.deck.mons9}/#{@article.deck.mons9}-#{@article.deck.arc9}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img10">
+            <%= image_tag "/tarots/#{@article.deck.mons10}/#{@article.deck.mons10}-#{@article.deck.arc10}.png", alt: 'tarot' %>
+          </div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img11">
+            <%= image_tag "/tarots/#{@article.deck.mons11}/#{@article.deck.mons11}-#{@article.deck.arc11}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img12">
+            <%= image_tag "/tarots/#{@article.deck.mons12}/#{@article.deck.mons12}-#{@article.deck.arc12}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img13">
+            <%= image_tag "/tarots/#{@article.deck.mons13}/#{@article.deck.mons13}-#{@article.deck.arc13}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img14">
+            <%= image_tag "/tarots/#{@article.deck.mons14}/#{@article.deck.mons14}-#{@article.deck.arc14}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img15">
+            <%= image_tag "/tarots/#{@article.deck.mons15}/#{@article.deck.mons15}-#{@article.deck.arc15}.png", alt: 'tarot' %>
+          </div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img16">
+            <%= image_tag "/tarots/#{@article.deck.mons16}/#{@article.deck.mons16}-#{@article.deck.arc16}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img17">
+            <%= image_tag "/tarots/#{@article.deck.mons17}/#{@article.deck.mons17}-#{@article.deck.arc17}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img18">
+            <%= image_tag "/tarots/#{@article.deck.mons18}/#{@article.deck.mons18}-#{@article.deck.arc18}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img19">
+            <%= image_tag "/tarots/#{@article.deck.mons19}/#{@article.deck.mons19}-#{@article.deck.arc19}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img20">
+            <%= image_tag "/tarots/#{@article.deck.mons20}/#{@article.deck.mons20}-#{@article.deck.arc20}.png", alt: 'tarot' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <% if user_signed_in? && current_user == @article.user %>
+      <div class="article-footer">
+        <%= link_to "編集する", "#", id: "edit", class: "edit-btn btn-radius" %>
+        <%= link_to "削除する", "#", id: "delete", class: "delete-btn btn-radius" %>
+        <p class="form-guideline">
+        ※ 「削除」ボタンを押すと記事が即時削除されます。復元できませんので十分ご注意ください。
+        </p>
+      </div>
+    <% end %>
+</div>
+
+<%= render 'shared/footer' %>
