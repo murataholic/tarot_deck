@@ -23,6 +23,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    redirect_to action: :index if current_user != @article.user
   end
 
   def update
@@ -45,10 +46,15 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(
-      :title, :text, :genre_id, :mons1_id, :mons2_id, :mons3_id, :mons4_id, :mons5_id, :mons6_id, :mons7_id, :mons8_id, :mons9_id, :mons10_id,
-      :mons11_id, :mons12_id, :mons13_id, :mons14_id, :mons15_id, :mons16_id, :mons17_id, :mons18_id, :mons19_id, :mons20_id,
-      :arc1_id, :arc2_id, :arc3_id, :arc4_id, :arc5_id, :arc6_id, :arc7_id, :arc8_id, :arc9_id, :arc10_id,
-      :arc11_id, :arc12_id, :arc13_id, :arc14_id, :arc15_id, :arc16_id, :arc17_id, :arc18_id, :arc19_id, :arc20_id
+      :title, :text, :genre_id,
+      :mons1_id, :mons2_id, :mons3_id, :mons4_id, :mons5_id,
+      :mons6_id, :mons7_id, :mons8_id, :mons9_id, :mons10_id,
+      :mons11_id, :mons12_id, :mons13_id, :mons14_id, :mons15_id,
+      :mons16_id, :mons17_id, :mons18_id, :mons19_id, :mons20_id,
+      :arc1_id, :arc2_id, :arc3_id, :arc4_id, :arc5_id,
+      :arc6_id, :arc7_id, :arc8_id, :arc9_id, :arc10_id,
+      :arc11_id, :arc12_id, :arc13_id, :arc14_id, :arc15_id,
+      :arc16_id, :arc17_id, :arc18_id, :arc19_id, :arc20_id
     ).merge(user_id: current_user.id)
   end
 end
