@@ -67,6 +67,4 @@ class Monster < ActiveHash::Base
     { id: 64, name: 'ベンガルクーン' }
   ]
 
-  include ActiveHash::Associations
-  has_many :decks
 end
