@@ -3,14 +3,50 @@ ja:
     attributes:
       user:
         nickname: ニックネーム
-  activemodel:
-    attributes:
-      user:
-        nickname: ニックネーム
-      article_deck:
+      article:
         title: タイトル
-        genre: ジャンル
+        genre_id: ジャンル
         text: テキスト
+        arc1_id:  1枚目のアルカナ
+        arc2_id:  2枚目のアルカナ
+        arc3_id:  3枚目のアルカナ
+        arc4_id:  4枚目のアルカナ
+        arc5_id:  5枚目のアルカナ
+        arc6_id:  6枚目のアルカナ
+        arc7_id:  7枚目のアルカナ
+        arc8_id:  8枚目のアルカナ
+        arc9_id:  9枚目のアルカナ
+        arc10_id:  10枚目のアルカナ
+        arc11_id:  11枚目のアルカナ
+        arc12_id:  12枚目のアルカナ
+        arc13_id:  13枚目のアルカナ
+        arc14_id:  14枚目のアルカナ
+        arc15_id:  15枚目のアルカナ
+        arc16_id:  16枚目のアルカナ
+        arc17_id:  17枚目のアルカナ
+        arc18_id:  18枚目のアルカナ
+        arc19_id:  19枚目のアルカナ
+        arc20_id:  20枚目のアルカナ
+        mons1_id:  1枚目のモンスター名
+        mons2_id:  2枚目のモンスター名
+        mons3_id:  3枚目のモンスター名
+        mons4_id:  4枚目のモンスター名
+        mons5_id:  5枚目のモンスター名
+        mons6_id:  6枚目のモンスター名
+        mons7_id:  7枚目のモンスター名
+        mons8_id:  8枚目のモンスター名
+        mons9_id:  9枚目のモンスター名
+        mons10_id:  10枚目のモンスター名
+        mons11_id:  11枚目のモンスター名
+        mons12_id:  12枚目のモンスター名
+        mons13_id:  13枚目のモンスター名
+        mons14_id:  14枚目のモンスター名
+        mons15_id:  15枚目のモンスター名
+        mons16_id:  16枚目のモンスター名
+        mons17_id:  17枚目のモンスター名
+        mons18_id:  18枚目のモンスター名
+        mons19_id:  19枚目のモンスター名
+        mons20_id:  20枚目のモンスター名
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
