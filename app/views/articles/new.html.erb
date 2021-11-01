@@ -1,7 +1,7 @@
 <%= render 'shared/header' %>
 
 <div class="article-lists">
-  <%= form_with model: @article_deck, url:articles_path, local: true do |f| %>
+  <%= form_with model: @article, url:articles_path, local: true do |f| %>
 
   <%= render 'shared/error_messages', model: f.object %>
     <div class="article-content">
@@ -11,7 +11,7 @@
           <p class="text-caution">※タイトルは30文字以内でご記入ください。</p>
         </div>
         <div class="genre">
-          <%= f.collection_select(:genre, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+          <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
         </div>
         <%= f.text_area :text, class:"text", id:"article_text" %>
         <div class="word-count">
@@ -21,96 +21,96 @@
       </div>
       <div class="deck-tables">
         <div class="grid-fit">
-          <div class="item" id="img1">image1</div>
-          <div class="item" id="img2">image2</div>
-          <div class="item" id="img3">image3</div>
-          <div class="item" id="img4">image4</div>
-          <div class="item" id="img5">image5</div>
+          <div class="item" id="img1">1枚目</div>
+          <div class="item" id="img2">2枚目</div>
+          <div class="item" id="img3">3枚目</div>
+          <div class="item" id="img4">4枚目</div>
+          <div class="item" id="img5">5枚目</div>
         </div>
         <div class="select-tabs">
           <div class="monster-fit">
-            <%= f.collection_select(:mons1, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons2, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons3, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons4, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons5, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons1_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons2_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons3_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons4_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons5_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
           </div>
           <div class="arcana-fit">
-            <%= f.collection_select(:arc1, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc2, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
-            <%= f.collection_select(:arc3, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc4, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc5, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc1_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc2_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
+            <%= f.collection_select(:arc3_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc4_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc5_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
           </div>
         </div>
 
         <div class="grid-fit">
-          <div class="item" id="img6">image6</div>
-          <div class="item" id="img7">image7</div>
-          <div class="item" id="img8">image8</div>
-          <div class="item" id="img9">image9</div>
-          <div class="item" id="img10">image10</div>
+          <div class="item" id="img6">6枚目</div>
+          <div class="item" id="img7">7枚目</div>
+          <div class="item" id="img8">8枚目</div>
+          <div class="item" id="img9">9枚目</div>
+          <div class="item" id="img10">10枚目</div>
         </div>
         <div class="select-tabs">
           <div class="monster-fit">
-            <%= f.collection_select(:mons6, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons7, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons8, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons9, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons10, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons6_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons7_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons8_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons9_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons10_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
           </div>
           <div class="arcana-fit">
-            <%= f.collection_select(:arc6, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc7, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
-            <%= f.collection_select(:arc8, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc9, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc10, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc6_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc7_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
+            <%= f.collection_select(:arc8_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc9_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc10_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
           </div>
         </div>
         <div class="grid-fit">
-          <div class="item" id="img11">image11</div>
-          <div class="item" id="img12">image12</div>
-          <div class="item" id="img13">image13</div>
-          <div class="item" id="img14">image14</div>
-          <div class="item" id="img15">image15</div>
+          <div class="item" id="img11">11枚目</div>
+          <div class="item" id="img12">12枚目</div>
+          <div class="item" id="img13">13枚目</div>
+          <div class="item" id="img14">14枚目</div>
+          <div class="item" id="img15">15枚目</div>
         </div>
         <div class="select-tabs">
           <div class="monster-fit">
-            <%= f.collection_select(:mons11, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons12, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons13, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons14, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons15, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons11_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons12_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons13_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons14_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons15_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
           </div>
           <div class="arcana-fit">
-            <%= f.collection_select(:arc11, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc12, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
-            <%= f.collection_select(:arc13, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc14, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc15, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc11_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc12_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
+            <%= f.collection_select(:arc13_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc14_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc15_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
           </div>
         </div>
         <div class="grid-fit">
-          <div class="item" id="img16">image16</div>
-          <div class="item" id="img17">image17</div>
-          <div class="item" id="img18">image18</div>
-          <div class="item" id="img19">image19</div>
-          <div class="item" id="img20">image20</div>
+          <div class="item" id="img16">16枚目</div>
+          <div class="item" id="img17">17枚目</div>
+          <div class="item" id="img18">18枚目</div>
+          <div class="item" id="img19">19枚目</div>
+          <div class="item" id="img20">20枚目</div>
         </div>
         <div class="select-tabs">
           <div class="monster-fit">
-            <%= f.collection_select(:mons16, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons17, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons18, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons19, Monster.all, :id, :name, {}, {class:"mons-select"})%>
-            <%= f.collection_select(:mons20, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons16_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons17_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons18_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons19_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
+            <%= f.collection_select(:mons20_id, Monster.all, :id, :name, {}, {class:"mons-select"})%>
           </div>
           <div class="arcana-fit">
-            <%= f.collection_select(:arc16, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc17, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
-            <%= f.collection_select(:arc18, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc19, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
-            <%= f.collection_select(:arc20, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc16_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc17_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>    
+            <%= f.collection_select(:arc18_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc19_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
+            <%= f.collection_select(:arc20_id, Arcanum.all, :id, :name, {}, {class:"arc-select"})%>
           </div>
         </div>
       </div>
