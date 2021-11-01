@@ -66,5 +66,4 @@ class Monster < ActiveHash::Base
     { id: 63, name: 'ランクB' },
     { id: 64, name: 'ベンガルクーン' }
   ]
-
 end
