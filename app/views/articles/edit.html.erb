@@ -1,7 +1,7 @@
 <%= render 'shared/header' %>
 
 <div class="article-lists">
-  <%= form_with model: @article, url:articles_path, local: true do |f| %>
+  <%= form_with model: @article, url:article_path, local: true do |f| %>
 
   <%= render 'shared/error_messages', model: f.object %>
     <div class="article-content">
@@ -117,6 +117,7 @@
     </div>
     
     <div class="article-footer">
+      <%= link_to "前に戻る", article_path(@article.id), id: "show", class: "btn btn-radius" %>
       <%= f.submit "投稿する", id: "submit", class:"btn btn-radius" %>
     </div>
   <% end %>

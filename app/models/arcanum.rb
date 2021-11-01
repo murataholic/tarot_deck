@@ -24,7 +24,4 @@ class Arcanum < ActiveHash::Base
     { id: 21, name: '愚者' },
     { id: 22, name: '女帝' }
   ]
-
-  include ActiveHash::Associations
-  has_many :decks
 end

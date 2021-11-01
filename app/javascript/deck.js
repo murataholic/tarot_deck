@@ -13,124 +13,124 @@ const deck = () => {
     }
   });
 
-  let mons1 = document.getElementById("article_deck_mons1");
+  let mons1 = document.getElementById("article_mons1_id");
   mons1.addEventListener("change", showImage1);
 
-  let arc1 = document.getElementById("article_deck_arc1");
+  let arc1 = document.getElementById("article_arc1_id");
   arc1.addEventListener("change", showImage1);
 
-  let mons2 = document.getElementById("article_deck_mons2");
+  let mons2 = document.getElementById("article_mons2_id");
   mons2.addEventListener("change", showImage2);
 
-  let arc2 = document.getElementById("article_deck_arc2");
+  let arc2 = document.getElementById("article_arc2_id");
   arc2.addEventListener("change", showImage2);
 
-  let mons3 = document.getElementById("article_deck_mons3");
+  let mons3 = document.getElementById("article_mons3_id");
   mons3.addEventListener("change", showImage3);
 
-  let arc3 = document.getElementById("article_deck_arc3");
+  let arc3 = document.getElementById("article_arc3_id");
   arc3.addEventListener("change", showImage3);
 
-  let mons4 = document.getElementById("article_deck_mons4");
+  let mons4 = document.getElementById("article_mons4_id");
   mons4.addEventListener("change", showImage4);
 
-  let arc4 = document.getElementById("article_deck_arc4");
+  let arc4 = document.getElementById("article_arc4_id");
   arc4.addEventListener("change", showImage4);
 
-  let mons5 = document.getElementById("article_deck_mons5");
+  let mons5 = document.getElementById("article_mons5_id");
   mons5.addEventListener("change", showImage5);
 
-  let arc5 = document.getElementById("article_deck_arc5");
+  let arc5 = document.getElementById("article_arc5_id");
   arc5.addEventListener("change", showImage5);
 
-  let mons6 = document.getElementById("article_deck_mons6");
+  let mons6 = document.getElementById("article_mons6_id");
   mons6.addEventListener("change", showImage6);
 
-  let arc6 = document.getElementById("article_deck_arc6");
+  let arc6 = document.getElementById("article_arc6_id");
   arc6.addEventListener("change", showImage6);
 
-  let mons7 = document.getElementById("article_deck_mons7");
+  let mons7 = document.getElementById("article_mons7_id");
   mons7.addEventListener("change", showImage7);
 
-  let arc7 = document.getElementById("article_deck_arc7");
+  let arc7 = document.getElementById("article_arc7_id");
   arc7.addEventListener("change", showImage7);
 
-  let mons8 = document.getElementById("article_deck_mons8");
+  let mons8 = document.getElementById("article_mons8_id");
   mons8.addEventListener("change", showImage8);
 
-  let arc8 = document.getElementById("article_deck_arc8");
+  let arc8 = document.getElementById("article_arc8_id");
   arc8.addEventListener("change", showImage8);
 
-  let mons9 = document.getElementById("article_deck_mons9");
+  let mons9 = document.getElementById("article_mons9_id");
   mons9.addEventListener("change", showImage9);
 
-  let arc9 = document.getElementById("article_deck_arc9");
+  let arc9 = document.getElementById("article_arc9_id");
   arc9.addEventListener("change", showImage9);
 
-  let mons10 = document.getElementById("article_deck_mons10");
+  let mons10 = document.getElementById("article_mons10_id");
   mons10.addEventListener("change", showImage10);
 
-  let arc10 = document.getElementById("article_deck_arc10");
+  let arc10 = document.getElementById("article_arc10_id");
   arc10.addEventListener("change", showImage10);
 
-  let mons11 = document.getElementById("article_deck_mons11");
+  let mons11 = document.getElementById("article_mons11_id");
   mons11.addEventListener("change", showImage11);
 
-  let arc11 = document.getElementById("article_deck_arc11");
+  let arc11 = document.getElementById("article_arc11_id");
   arc11.addEventListener("change", showImage11);
 
-  let mons12 = document.getElementById("article_deck_mons12");
+  let mons12 = document.getElementById("article_mons12_id");
   mons12.addEventListener("change", showImage12);
 
-  let arc12 = document.getElementById("article_deck_arc12");
+  let arc12 = document.getElementById("article_arc12_id");
   arc12.addEventListener("change", showImage12);
 
-  let mons13 = document.getElementById("article_deck_mons13");
+  let mons13 = document.getElementById("article_mons13_id");
   mons13.addEventListener("change", showImage13);
 
-  let arc13 = document.getElementById("article_deck_arc13");
+  let arc13 = document.getElementById("article_arc13_id");
   arc13.addEventListener("change", showImage13);
 
-  let mons14 = document.getElementById("article_deck_mons14");
+  let mons14 = document.getElementById("article_mons14_id");
   mons14.addEventListener("change", showImage14);
 
-  let arc14 = document.getElementById("article_deck_arc14");
+  let arc14 = document.getElementById("article_arc14_id");
   arc14.addEventListener("change", showImage14);
 
-  let mons15 = document.getElementById("article_deck_mons15");
+  let mons15 = document.getElementById("article_mons15_id");
   mons15.addEventListener("change", showImage15);
 
-  let arc15 = document.getElementById("article_deck_arc15");
+  let arc15 = document.getElementById("article_arc15_id");
   arc15.addEventListener("change", showImage15);
 
-  let mons16 = document.getElementById("article_deck_mons16");
+  let mons16 = document.getElementById("article_mons16_id");
   mons16.addEventListener("change", showImage16);
 
-  let arc16 = document.getElementById("article_deck_arc16");
+  let arc16 = document.getElementById("article_arc16_id");
   arc16.addEventListener("change", showImage16);
 
-  let mons17 = document.getElementById("article_deck_mons17");
+  let mons17 = document.getElementById("article_mons17_id");
   mons17.addEventListener("change", showImage17);
 
-  let arc17 = document.getElementById("article_deck_arc17");
+  let arc17 = document.getElementById("article_arc17_id");
   arc17.addEventListener("change", showImage17);
 
-  let mons18 = document.getElementById("article_deck_mons18");
+  let mons18 = document.getElementById("article_mons18_id");
   mons18.addEventListener("change", showImage18);
 
-  let arc18 = document.getElementById("article_deck_arc18");
+  let arc18 = document.getElementById("article_arc18_id");
   arc18.addEventListener("change", showImage18);
 
-  let mons19 = document.getElementById("article_deck_mons19");
+  let mons19 = document.getElementById("article_mons19_id");
   mons19.addEventListener("change", showImage19);
 
-  let arc19 = document.getElementById("article_deck_arc19");
+  let arc19 = document.getElementById("article_arc19_id");
   arc19.addEventListener("change", showImage19);
 
-  let mons20 = document.getElementById("article_deck_mons20");
+  let mons20 = document.getElementById("article_mons20_id");
   mons20.addEventListener("change", showImage20);
 
-  let arc20 = document.getElementById("article_deck_arc20");
+  let arc20 = document.getElementById("article_arc20_id");
   arc20.addEventListener("change", showImage20);
 
   function showImage1() {

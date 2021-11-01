@@ -51,68 +51,57 @@ screen_flow.dioを参照。
 ### Association
 
 - has_many :articles
-- has_many :decks
 
 ## articles テーブル
 
 | Column    | Type       | Options                        | 
 | --------- | ---------- | -------------------------------|
-| title     | string     | null: false                    |
-| text      | text       | null: false                    |
-| genre_id  | integer    | null: false                    |
 | user      | references | null: false, foreign_key: true |
+| title     | string     | null: false                    |
+| genre_id  | integer    | null: false                    |
+| text      | text       | null: false                    |
+| arc1_id   | integer    | null: false                    |
+| arc2_id   | integer    | null: false                    |
+| arc3_id   | integer    | null: false                    |
+| arc4_id   | integer    | null: false                    |
+| arc5_id   | integer    | null: false                    |
+| arc6_id   | integer    | null: false                    |
+| arc7_id   | integer    | null: false                    |
+| arc8_id   | integer    | null: false                    |
+| arc9_id   | integer    | null: false                    |
+| arc10_id  | integer    | null: false                    |
+| arc11_id  | integer    | null: false                    |
+| arc12_id  | integer    | null: false                    |
+| arc13_id  | integer    | null: false                    |
+| arc14_id  | integer    | null: false                    |
+| arc15_id  | integer    | null: false                    |
+| arc16_id  | integer    | null: false                    |
+| arc17_id  | integer    | null: false                    |
+| arc18_id  | integer    | null: false                    |
+| arc19_id  | integer    | null: false                    |
+| arc20_id  | integer    | null: false                    |
+| mons1_id  | integer    | null: false                    |
+| mons2_id  | integer    | null: false                    |
+| mons3_id  | integer    | null: false                    |
+| mons4_id  | integer    | null: false                    |
+| mons5_id  | integer    | null: false                    |
+| mons6_id  | integer    | null: false                    |
+| mons7_id  | integer    | null: false                    |
+| mons8_id  | integer    | null: false                    |
+| mons9_id  | integer    | null: false                    |
+| mons10_id | integer    | null: false                    |
+| mons11_id | integer    | null: false                    |
+| mons12_id | integer    | null: false                    |
+| mons13_id | integer    | null: false                    |
+| mons14_id | integer    | null: false                    |
+| mons15_id | integer    | null: false                    |
+| mons16_id | integer    | null: false                    |
+| mons17_id | integer    | null: false                    |
+| mons18_id | integer    | null: false                    |
+| mons19_id | integer    | null: false                    |
+| mons20_id | integer    | null: false                    |
 
 ### Association
 
 - belongs_to :user
-- has_one :deck
 
-### decks テーブル
-
-| Column | Type       | Options                        |
-| -------| ---------- | ------------------------------ |
-| article| references | null: false, foreign_key: true |
-| arc1   | integer    | null: false                    |
-| arc2   | integer    | null: false                    |
-| arc3   | integer    | null: false                    |
-| arc4   | integer    | null: false                    |
-| arc5   | integer    | null: false                    |
-| arc6   | integer    | null: false                    |
-| arc7   | integer    | null: false                    |
-| arc8   | integer    | null: false                    |
-| arc9   | integer    | null: false                    |
-| arc10  | integer    | null: false                    |
-| arc11  | integer    | null: false                    |
-| arc12  | integer    | null: false                    |
-| arc13  | integer    | null: false                    |
-| arc14  | integer    | null: false                    |
-| arc15  | integer    | null: false                    |
-| arc16  | integer    | null: false                    |
-| arc17  | integer    | null: false                    |
-| arc18  | integer    | null: false                    |
-| arc19  | integer    | null: false                    |
-| arc20  | integer    | null: false                    |
-| mons1  | integer    | null: false                    |
-| mons2  | integer    | null: false                    |
-| mons3  | integer    | null: false                    |
-| mons4  | integer    | null: false                    |
-| mons5  | integer    | null: false                    |
-| mons6  | integer    | null: false                    |
-| mons7  | integer    | null: false                    |
-| mons8  | integer    | null: false                    |
-| mons9  | integer    | null: false                    |
-| mons10 | integer    | null: false                    |
-| mons11 | integer    | null: false                    |
-| mons12 | integer    | null: false                    |
-| mons13 | integer    | null: false                    |
-| mons14 | integer    | null: false                    |
-| mons15 | integer    | null: false                    |
-| mons16 | integer    | null: false                    |
-| mons17 | integer    | null: false                    |
-| mons18 | integer    | null: false                    |
-| mons19 | integer    | null: false                    |
-| mons20 | integer    | null: false                    |
-
-### Association
-
-- belongs_to :article
