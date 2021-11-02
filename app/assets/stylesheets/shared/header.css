@@ -44,3 +44,7 @@ li {
   margin: 0;
   display: flex;
 }
+
+.search-form {
+  display: flex;
+}
