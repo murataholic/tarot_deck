@@ -50,6 +50,11 @@ class ArticlesController < ApplicationController
                 end
   end
 
+  def my_page
+    @user = User.find(params[:user_id])
+    @articles = User.find(params[:user_id]).articles
+  end
+
   private
 
   def set_article
