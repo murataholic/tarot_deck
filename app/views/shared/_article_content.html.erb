@@ -1,0 +1,90 @@
+<div class="article-content">
+      <div class="description">
+      <%# if @current_time < article.created_at.since(7.day) %>
+        <div class="ribbon20-wrapper">
+          <h3 class="ribbon20">NEW!</h3>
+        </div>
+      <%# end %>
+        <div class="article-title">
+          <%= link_to article.title, article_path(article.id) %>
+        </div>
+        <div class="details">
+          <p class="date"><%= article.created_at.to_s(:datetime_jp) %></p>
+          <p class="tags">テーマ：<%= article.genre.name %></p> 
+        </div>
+          <p class="author"><%= link_to "by #{article.user.nickname}",my_page_articles_path(user_id: article.user_id) %></p>
+        <div class="text"><%= article.text %>
+        </div>
+        <%= link_to "Read More", article_path(article.id) %>
+      </div>
+      <div class="deck-tables">
+        <div class="grid-fit">
+          <div class="item" id="img1">
+            <%= image_tag "/tarots/#{article.mons1_id}/#{article.mons1_id}-#{article.arc1_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img2">
+            <%= image_tag "/tarots/#{article.mons2_id}/#{article.mons2_id}-#{article.arc2_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img3">
+            <%= image_tag "/tarots/#{article.mons3_id}/#{article.mons3_id}-#{article.arc3_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img4">
+            <%= image_tag "/tarots/#{article.mons4_id}/#{article.mons4_id}-#{article.arc4_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img5">
+            <%= image_tag "/tarots/#{article.mons5_id}/#{article.mons5_id}-#{article.arc5_id}.png", alt: 'tarot' %>
+          </div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img6">
+            <%= image_tag "/tarots/#{article.mons6_id}/#{article.mons6_id}-#{article.arc6_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img7">
+            <%= image_tag "/tarots/#{article.mons7_id}/#{article.mons7_id}-#{article.arc7_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img8">
+            <%= image_tag "/tarots/#{article.mons8_id}/#{article.mons8_id}-#{article.arc8_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img9">
+            <%= image_tag "/tarots/#{article.mons9_id}/#{article.mons9_id}-#{article.arc9_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img10">
+            <%= image_tag "/tarots/#{article.mons10_id}/#{article.mons10_id}-#{article.arc10_id}.png", alt: 'tarot' %>
+          </div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img11">
+            <%= image_tag "/tarots/#{article.mons11_id}/#{article.mons11_id}-#{article.arc11_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img12">
+            <%= image_tag "/tarots/#{article.mons12_id}/#{article.mons12_id}-#{article.arc12_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img13">
+            <%= image_tag "/tarots/#{article.mons13_id}/#{article.mons13_id}-#{article.arc13_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img14">
+            <%= image_tag "/tarots/#{article.mons14_id}/#{article.mons14_id}-#{article.arc14_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img15">
+            <%= image_tag "/tarots/#{article.mons15_id}/#{article.mons15_id}-#{article.arc15_id}.png", alt: 'tarot' %>
+          </div>
+        </div>
+        <div class="grid-fit">
+          <div class="item" id="img16">
+            <%= image_tag "/tarots/#{article.mons16_id}/#{article.mons16_id}-#{article.arc16_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img17">
+            <%= image_tag "/tarots/#{article.mons17_id}/#{article.mons17_id}-#{article.arc17_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img18">
+            <%= image_tag "/tarots/#{article.mons18_id}/#{article.mons18_id}-#{article.arc18_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img19">
+            <%= image_tag "/tarots/#{article.mons19_id}/#{article.mons19_id}-#{article.arc19_id}.png", alt: 'tarot' %>
+          </div>
+          <div class="item" id="img20">
+            <%= image_tag "/tarots/#{article.mons20_id}/#{article.mons20_id}-#{article.arc20_id}.png", alt: 'tarot' %>
+          </div>
+        </div>
+      </div>
+    </div>
