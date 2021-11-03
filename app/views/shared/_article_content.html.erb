@@ -1,10 +1,10 @@
 <div class="article-content">
       <div class="description">
-      <%# if @current_time < article.created_at.since(7.day) %>
+      <% if @current_time < article.created_at.since(7.day) %>
         <div class="ribbon20-wrapper">
           <h3 class="ribbon20">NEW!</h3>
         </div>
-      <%# end %>
+      <% end %>
         <div class="article-title">
           <%= link_to article.title, article_path(article.id) %>
         </div>

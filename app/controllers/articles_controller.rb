@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :set_genre, only: [:search, :search_result]
+  before_action :set_time, only: [:index, :show, :search_result, :my_page]
   def index
     @articles = Article.includes(:user)
   end
@@ -63,6 +64,10 @@ class ArticlesController < ApplicationController
 
   def set_genre
     @genres = Genre.where(id: 1..12)
+  end
+
+  def set_time
+    @current_time = Time.current
   end
 
   def article_params
