@@ -43,11 +43,11 @@ class ArticlesController < ApplicationController
   end
 
   def search_result
-    if params[:genre_id].present?
-      @articles = Genre.find(params[:genre_id]).articles
-    else
-      @articles = Article.search(params[:keyword])
-    end
+    @articles = if params[:genre_id].present?
+                  Genre.find(params[:genre_id]).articles
+                else
+                  Article.search(params[:keyword])
+                end
   end
 
   private

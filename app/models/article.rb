@@ -94,11 +94,10 @@ class Article < ApplicationRecord
   end
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Article.where('text LIKE(?)', "%#{search}%")
     else
       Article.includes(:user)
     end
   end
-
 end
