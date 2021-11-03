@@ -18,18 +18,17 @@ class Article < ApplicationRecord
   end
 
   validate :title_length_check
+  validate :text_length_check
+  validate :arcana_count_check
+  validate :monsters_count_check
 
   def title_length_check
     errors.add(:title, 'は30文字以内でご記入ください') if title.to_s.length > 30
   end
 
-  validate :text_length_check
-
   def text_length_check
     errors.add(:text, 'は2000文字以内でご記入ください') if text.to_s.length > 2000
   end
-
-  validate :arcana_count_check
 
   def arcana_count_check
     arcanum_id_and_number = {}
@@ -55,8 +54,6 @@ class Article < ApplicationRecord
       end
     end
   end
-
-  validate :monsters_count_check
 
   def monsters_count_check
     monster_id_and_number = {}
@@ -95,4 +92,13 @@ class Article < ApplicationRecord
   def monster_error
     errors[:base] << '登録できません。モンスターを修正してください'
   end
+
+  def self.search(search)
+    if search != ""
+      Article.where('text LIKE(?)', "%#{search}%")
+    else
+      Article.includes(:user)
+    end
+  end
+
 end
