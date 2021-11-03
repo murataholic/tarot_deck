@@ -154,7 +154,7 @@ align-items: center;
 
 .article-content{
   border: solid 1px ;
-  margin-bottom: 10px;
+  margin: 1.5em 0;
   padding: 10px;
   max-width: 1180px;
   display: grid;
@@ -243,4 +243,28 @@ align-items: center;
 
 .btn-radius {
    border-radius: 100vh;
+}
+
+/* search.html.erb Layout */
+
+.search-input {
+  margin-left: -1.5em;
+}
+
+.genre-box {
+  width: 680px;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.genre-box li {
+  display: inline-block;
+  padding: 0 15px 0 0;
+  font-size: 1.2em;
+}
+
+/* search_result.html.erb Layout */
+
+.search-result {
+  margin-top: 2em;
 }
