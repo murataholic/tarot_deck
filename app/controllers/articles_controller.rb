@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_genre, only: [:search, :search_result]
+  before_action :set_time, only: [:index, :show, :search_result, :my_page]
   def index
     @articles = Article.includes(:user)
   end
@@ -38,10 +40,34 @@ class ArticlesController < ApplicationController
     redirect_to action: :index if @article.destroy
   end
 
+  def search
+  end
+
+  def search_result
+    @articles = if params[:genre_id].present?
+                  Genre.find(params[:genre_id]).articles
+                else
+                  Article.search(params[:keyword])
+                end
+  end
+
+  def my_page
+    @user = User.find(params[:user_id])
+    @articles = User.find(params[:user_id]).articles
+  end
+
   private
 
   def set_article
     @article = Article.find(params[:id])
+  end
+
+  def set_genre
+    @genres = Genre.where(id: 1..12)
+  end
+
+  def set_time
+    @current_time = Time.current
   end
 
   def article_params

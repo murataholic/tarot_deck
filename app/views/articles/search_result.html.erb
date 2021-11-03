@@ -1,0 +1,15 @@
+<%= render 'shared/header' %>
+
+<div class="article-lists">
+  <%= render 'shared/search_form' %>
+
+  <% if @articles.empty? %>
+    <h3 class="search-result">※お探しの記事は見つかりませんでした。条件を変えて検索してください。</h3>
+  <% else %>
+    <% @articles.each do |article| %>
+      <%= render partial: "shared/article_content", locals: { article: article } %>
+    <% end %>
+  <% end%>
+</div>
+
+<%= render 'shared/footer' %>

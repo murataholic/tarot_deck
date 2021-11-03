@@ -17,8 +17,8 @@
 
 .ribbon20-wrapper {
   display: inline-block;
-  padding: 20px 0;
   width: 83px;
+  padding-top: 1.5em;
   margin: -10px 0;
   }
 
@@ -37,6 +37,7 @@
 .article-title{
   font-size: 25.5px;
   font-weight: bold;
+  margin-top: 1em;
 }
 
 .details{
