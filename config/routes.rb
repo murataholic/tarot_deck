@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'articles#index'
   resources :articles do
     collection do
-      get 'search', 'search_result'
+      get 'search', 'search_result', 'my_page'
     end
   end
 end
