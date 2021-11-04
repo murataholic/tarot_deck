@@ -1,20 +1,17 @@
 class NicesController < ApplicationController
-  before_action :set_article
-
+  before_action :set_article, only: [:create, :destroy]
   def create
-    @nice = Nice.new(user_id: current_user.id,  article_id: @article.id)
+    @nice = current_user.nices.build(article_id: params[:article_id])
     @nice.save
   end
 
   def destroy
-    @nice = Nice.find_by(user_id: current_user.id, article_id:  @article.id)
+    @nice = Nice.find_by(user_id: current_user.id, article_id:  params[:article_id])
     @nice.destroy
   end
 
   private
-
   def set_article
-    #@article = Article.find_by(id: params[:article_id])
-    @article = Article.find(params[:id])
+    @article = Article.find(params[:article_id])
   end
 end
