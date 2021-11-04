@@ -1,7 +1,7 @@
 class Article < ApplicationRecord
   belongs_to :user
   has_many :nices, dependent: :destroy
-  has_many :nice_users, through: nices, source: user
+  has_many :nice_users, through: :nices, source: :user 
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
