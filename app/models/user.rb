@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :articles
+  has_many :nices, dependent: :destroy
+  has_many :nice_items, through: nices, source: article
   validates :nickname, presence: true,
                        format: { with: /\A[ぁ-んァ-ヴー－〜・]+\z/, message: 'は6文字以内のひらがな･カタカナで入力してください' }
 
