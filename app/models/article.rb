@@ -24,6 +24,10 @@ class Article < ApplicationRecord
   validate :arcana_count_check
   validate :monsters_count_check
 
+  def favorited_by?(user)
+    nices.where(user_id: user.id).exists?
+  end
+
   def title_length_check
     errors.add(:title, 'は30文字以内でご記入ください') if title.to_s.length > 30
   end
