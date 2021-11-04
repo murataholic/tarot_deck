@@ -69,6 +69,10 @@
   overflow: scroll;
 }
 
+.reaction-area {
+  text-align: right;
+}
+
 .DeckTablesGrid{
   display: flex;
   justify-content: center;
