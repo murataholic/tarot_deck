@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+  <% if article.favorited_by?(current_user) %>
+    <%= link_to 'いいね！を取り消す', article_nices_path(article.id), method: :delete, remote: true, class: "nice-btn" %>
+  <% else %>
+    <%= link_to 'このデッキにいいね！', article_nices_path(article.id), method: :post, remote: true, class: "nice-btn" %>
+  <% end %>
+<% else %>
+  <p class="nice-btn">このデッキにいいね！</p>
+<% end %>
+<p class="nice-count", id="nice-count">いいね！<%= article.nices.count %>件</p>
