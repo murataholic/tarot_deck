@@ -2,8 +2,10 @@
 <%= render 'shared/header' %>
 
 <div class="form-wrapper">
-  <h1>新規登録フォーム</h1>
-  <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+  <div class="form-title">
+    <h1>新規登録フォーム</h1>
+  </div>
+  <%= form_with model: @user, url: user_registration_path, class: 'new_user', local: true do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="form-item">
       <label class="form-text">ニックネーム</label>
