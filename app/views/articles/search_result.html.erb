@@ -6,6 +6,7 @@
   <% if @articles.empty? %>
     <h3 class="search-result">※お探しの記事は見つかりませんでした。条件を変えて検索してください。</h3>
   <% else %>
+    <h3 class="search-result"><%= "「#{Genre.find(params[:genre_id]).name}」" %>の記事一覧</h3>
     <% @articles.each do |article| %>
       <%= render partial: "shared/article_content", locals: { article: article } %>
     <% end %>
