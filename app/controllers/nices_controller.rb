@@ -6,11 +6,12 @@ class NicesController < ApplicationController
   end
 
   def destroy
-    @nice = Nice.find_by(user_id: current_user.id, article_id:  params[:article_id])
+    @nice = Nice.find_by(user_id: current_user.id, article_id: params[:article_id])
     @nice.destroy
   end
 
   private
+
   def set_article
     @article = Article.find(params[:article_id])
   end
