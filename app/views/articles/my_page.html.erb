@@ -1,14 +1,17 @@
 <%= render 'shared/header' %>
 
 <div class="article-lists">
-  <% if @articles.empty? %>
-    <h3 class="search-result"><%= "#{@user.nickname}さんの記事はありません" %></h3>
-  <% else %>
-    <h3><%= "#{@user.nickname} さんの記事一覧" %></h3>
-    <% @articles.each do |article| %>
-      <%= render partial: "shared/article_content", locals: { article: article } %>
+  <div class="search-result">
+    <% if @articles.empty? %>
+      <h3><%= "#{@user.nickname} さんの記事はありません" %></h3>
+    <% else %>
+      <h3><%= "#{@user.nickname} さんの記事一覧" %></h3>
     <% end %>
+  </div>
+  <% @articles.each do |article| %>
+    <%= render partial: "shared/article_content", locals: { article: article } %>
   <% end %>
+  
 </div>
 
 <%= render 'shared/footer' %>

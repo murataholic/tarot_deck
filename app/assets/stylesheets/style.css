@@ -14,7 +14,7 @@ body {
   font: 400 87.5%/1.5em 'Open Sans', sans-serif;
 }
 
-/* Form Layout */
+/* Sign_up and Sign_in form Layout */
 .form-wrapper {
   background: #fafafa;
   margin: 140px auto 3em;
@@ -25,6 +25,10 @@ body {
 h1 {
   text-align: center;
   padding: 1em 0;
+}
+
+.form-title {
+  padding: 1.5em;
 }
 
 .form-text {
@@ -97,6 +101,54 @@ form {
   font-size: smaller;
 }
 
+/* Header Layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #e6e6e6;
+}
+
+header {
+  width: 100%;
+  padding: 20px 4% 10px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+a {	
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.global-nav{
+  margin-left: auto;
+}
+
+.nav-bar {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+
 /* Footer Layout */
 .wrapper{
   min-height: 1vh;
@@ -119,68 +171,124 @@ form {
   font-size: 12px;
 }
 
-/* new.html.erb Layout */
-.article-body{
-  border:1px solid #ccc;
-  width: 500px;
-}
-.grid-fit{
-width: 500px;
-margin-left: auto;
-padding: 5px;
-border: 1px solid #ee8392;
-display: flex;
-grid-gap: 10px;  
+/* _article_content.html.erb Layout */
+.article-lists{
+  padding: 50px 0 100px 0;
+  margin: auto 0 auto;
 }
 
-.item {
-height: 130px;
-width: 90px;
-border:1px solid #ccc;
-background-color: #fff;
-display:flex;
-justify-content: center;
-align-items: center;
+.ribbon20-wrapper {
+  display: inline-block;
+  width: 83px;
+  padding-top: 1.5em;
+  margin: -10px 0;
+  }
+
+.ribbon20 {
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin: 0;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: white;
+  background: #ff7470;
 }
 
-.article-box {
-  height:200px;
-  background-color: lightgray;
+.article-title{
+  font-size: 25.5px;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+.details{
   display: flex;
+}
+
+.date .tags .author{
+  margin: 5px 0;
+}
+
+.tags, .author {
+  margin-left: 30px;
+}
+
+.main-content {
+  display: flex;
+}
+
+.text{
+  background-color: white;
+  padding: 5px;
+  border: 1px solid gray;
+  font-size: 15px;
+  line-height: 1.4;
+  width: 440px;
+  height: 548.5px;
+  white-space: pre-wrap;
+  overflow: scroll;
+  resize: none;
+}
+
+.grid-fit{
+  width: 475px;
+  padding: 2.5px;
+  border: 1px solid gray;
+  display: flex;
+  grid-gap: 5px;  
+  }
+  
+  .item {
+  height: 130px;
+  width: 90px;
+  border:1px solid #ccc;
+  background-color: #fff;
+  display:flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  }
+
+.reaction-area {
+  text-align: right;
 }
 
+.nice-btn, .nice-count {
+  display: inline;
+}
+
+/* _article_form.html.erb Layout */
 .article-content{
   border: solid 1px ;
-  margin: 1.5em 0;
+  margin: 1.5em auto auto;
   padding: 10px;
-  max-width: 1180px;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: auto 1fr;
+  width: 935px;
   overflow: scroll;
 }
 
 .title-form {
   height: 30px;
-  min-width: 100%;
+  width: 33em;
   margin: 20px 0 0;
+}
+
+.genre {
+  margin-bottom: 2em;
 }
 
 .genre-select {
   height: 30px;
 }
 
-.text{
-  margin-top: 20px;
+.input-text{
+  background-color: white;
   padding: 5px;
   border: 1px solid gray;
   font-size: 15px;
   line-height: 1.4;
-  min-width: 595px;
-  height: 540px;
+  width: 440px;
+  height: 653px;
   white-space: pre-wrap;
   overflow: scroll;
   resize: none;
@@ -202,26 +310,26 @@ align-items: center;
 .monster-fit, .arcana-fit{
   display: flex;
   justify-content: center;
-  margin-left: 55px;
 }
 .mons-select, .arc-select {
   font-size: 8px;
   width: 90px;
-  margin: 0 5px;
+  margin: 0 2.5px;
 }
 
 .select-tabs {
-  margin: 5px 0 5px;
+  margin-bottom: 5px;
 }
 
-
+.article-footer {
+  margin: 30px auto;
+  width: 935px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 /* show.html.erb Layout */
-.article-footer {
-  margin: 10px;
-  display: inline-block;
-}
-
 .btn, .delete-btn {
   color: #fff;
   background-color: orange;
@@ -246,6 +354,11 @@ align-items: center;
 }
 
 /* search.html.erb Layout */
+.search-area, .search-result{
+  margin: 1em auto ;
+  padding: 10px;
+  width: 935px;
+}
 
 .search-input {
   margin-left: -1.5em;
@@ -261,10 +374,4 @@ align-items: center;
   display: inline-block;
   padding: 0 15px 0 0;
   font-size: 1.2em;
-}
-
-/* search_result.html.erb Layout */
-
-.search-result {
-  margin-top: 2em;
 }

@@ -51,6 +51,7 @@ screen_flow.dioを参照。
 ### Association
 
 - has_many :articles
+- has_many :nices
 
 ## articles テーブル
 
@@ -104,4 +105,16 @@ screen_flow.dioを参照。
 ### Association
 
 - belongs_to :user
+- has_many :nices
 
+## nices テーブル
+
+| Column    | Type       | Options                        | 
+| --------- | ---------- | -------------------------------|
+| user      | references | null: false, foreign_key: true |
+| article   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :article

@@ -1,5 +1,7 @@
 class Article < ApplicationRecord
   belongs_to :user
+  has_many :nices, dependent: :destroy
+  has_many :nice_users, through: :nices, source: :user
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
@@ -21,6 +23,10 @@ class Article < ApplicationRecord
   validate :text_length_check
   validate :arcana_count_check
   validate :monsters_count_check
+
+  def favorited_by?(user)
+    nices.where(user_id: user.id).exists?
+  end
 
   def title_length_check
     errors.add(:title, 'は30文字以内でご記入ください') if title.to_s.length > 30
