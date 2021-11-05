@@ -2,7 +2,7 @@
 
 <div class="article-lists">
   <%= form_with model: @article, url:articles_path, local: true do |f| %>
-    <%= render 'shared/error_messages', model: f.object %>
+    
     <%= render partial: "shared/article_form", locals: { article: @article, f: f } %>
 
     <div class="article-footer">
