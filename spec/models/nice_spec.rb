@@ -14,13 +14,13 @@ RSpec.describe Nice, type: :model do
     it 'userが紐づいていなければ、いいね！ができない' do
       @nice.user = nil
       @nice.valid?
-      expect(@nice.errors.full_messages).to include("ユーザーを入力してください")
+      expect(@nice.errors.full_messages).to include('ユーザーを入力してください')
     end
     it 'articleが紐づいていなければ、いいね！ができない' do
       binding.pry
       @nice.article = nil
       @nice.valid?
-      expect(@nice.errors.full_messages).to include("記事を入力してください")
+      expect(@nice.errors.full_messages).to include('記事を入力してください')
     end
   end
 end
