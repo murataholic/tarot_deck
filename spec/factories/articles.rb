@@ -43,5 +43,6 @@ FactoryBot.define do
     mons18_id { 25 }
     mons19_id { 25 }
     mons20_id { 25 }
+    association :user
   end
 end
