@@ -40,7 +40,7 @@ RSpec.describe Article, type: :model do
         expect(@article.errors.full_messages).to include('テキストを入力してください')
       end
       it 'テキストが2001文字以上の場合、保存できない' do
-        @article.text = Faker::Number.number(digits: 2001)
+        @article.text = Faker::Lorem.characters(number: 2001)
         @article.valid?
         expect(@article.errors.full_messages).to include('テキストは2000文字以内でご記入ください')
       end
