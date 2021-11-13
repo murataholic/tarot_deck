@@ -53,7 +53,7 @@ RSpec.describe '記事投稿', type: :system do
     end
   end
   context '記事投稿ができないとき' do
-    it 'ログインしていないと新規投稿ページに遷移できない' do
+    it 'ログインしていない場合、新規投稿ページに遷移できない' do
       # トップページに遷移する
       visit root_path
       # 新規投稿ページへのボタンがあることを確認する
@@ -129,11 +129,10 @@ RSpec.describe '記事編集', type: :system do
       # article2の詳細ページに遷移する
       visit article_path(@article2)
       # article2に「編集」へのリンクがないことを確認する
-      binding.pry
       expect(page).to have_no_link '編集する', href: edit_article_path(@article2)
     end
     it 'ログインしていない場合、記事編集画面には遷移できない' do
-      # トップページにいる
+      # トップページに入る
       visit root_path
       # article1の詳細ページに遷移する
       visit article_path(@article1)
@@ -145,6 +144,64 @@ RSpec.describe '記事編集', type: :system do
       visit article_path(@article2)
       # article2に「編集」へのリンクがないことを確認する
       expect(page).to have_no_link '編集する', href: edit_article_path(@article2)
+    end
+  end
+end
+
+RSpec.describe '記事削除', type: :system do
+  before do
+    @user1 = FactoryBot.create(:user)
+    @user2 = FactoryBot.create(:user)
+    @article1 = FactoryBot.create(:article, user_id: @user1.id)
+    @article2 = FactoryBot.create(:article, user_id: @user2.id)
+  end
+  context '記事削除ができるとき' do
+    it 'ログインしたユーザーは自らが投稿した記事の削除ができる' do
+      # article1を投稿したユーザーでログインする
+      visit new_user_session_path
+      fill_in 'user_email', with: @user1.email
+      fill_in 'user_password', with: @user1.password
+      find('input[name="commit"]').click
+      # article1の詳細ページに遷移する
+      visit article_path(@article1)
+      # article1に「削除」へのリンクがあることを確認する
+      expect(page).to have_link '削除する', href: article_path(@article1)
+      # 投稿を削除するとレコードの数が1減ることを確認する
+      expect do
+        find_link('削除する', href: article_path(@article1)).click
+      end.to change { Article.count }.by(-1)
+      # トップページに遷移する
+      expect(current_path).to eq(root_path)
+      # トップページにはarticle1の内容が存在しないことを確認する（タイトル、テキスト）
+      expect(page).to have_no_content(@article1.title)
+      expect(page).to have_no_content(@article1.text)
+    end
+  end
+  context '記事削除ができないとき' do
+    it 'ログインしたユーザーは自分以外が投稿した記事の削除ができない' do
+      # article1を投稿したユーザーでログインする
+      visit new_user_session_path
+      fill_in 'user_email', with: @user1.email
+      fill_in 'user_password', with: @user1.password
+      find('input[name="commit"]').click
+      # article2の詳細ページに遷移する
+      visit article_path(@article2)
+      # article2に「削除」へのリンクがないことを確認する
+      expect(page).to have_no_link '削除する', href: article_path(@article2)
+    end
+    it 'ログインしていない場合、記事詳細ページに「削除する」ボタンはない' do
+      # トップページに入る
+      visit root_path
+      # article1の詳細ページに遷移する
+      visit article_path(@article1)
+      # article1に「削除」へのリンクがないことを確認する
+      expect(page).to have_no_link '削除する', href: article_path(@article1)
+      # トップページに戻る
+      visit root_path
+      # article2の詳細ページに遷移する
+      visit article_path(@article2)
+      # article2に「削除」へのリンクがないことを確認する
+      expect(page).to have_no_link '削除する', href: article_path(@article2)
     end
   end
 end

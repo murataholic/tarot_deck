@@ -17,7 +17,6 @@ RSpec.describe Nice, type: :model do
       expect(@nice.errors.full_messages).to include('ユーザーを入力してください')
     end
     it 'articleが紐づいていなければ、いいね！ができない' do
-      binding.pry
       @nice.article = nil
       @nice.valid?
       expect(@nice.errors.full_messages).to include('記事を入力してください')
