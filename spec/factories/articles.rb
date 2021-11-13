@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :article do
-    title     { 'タイトル' }
+    title     { Faker::Lorem.characters(number: 10) }
     genre_id  { Faker::Number.between(from: 1, to: 12) }
     text      { Faker::Lorem.characters(number: 100) }
     arc1_id   { 1 }
