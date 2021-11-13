@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   before_action :set_genre, only: [:search, :search_result]
   before_action :set_time, only: [:index, :show, :search_result, :my_page]
   def index
-    @articles = Article.includes(:user)
+    @articles = Article.includes(:user).order('created_at DESC')
   end
 
   def new
