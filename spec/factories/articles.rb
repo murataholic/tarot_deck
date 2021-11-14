@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :article do
-    title     { 'タイトル' }
+    title     { Faker::Lorem.characters(number: 10) }
     genre_id  { Faker::Number.between(from: 1, to: 12) }
-    text      { Faker::Number.number(digits: 10) }
+    text      { Faker::Lorem.characters(number: 100) }
     arc1_id   { 1 }
     arc2_id   { 2 }
     arc3_id   { 3 }
@@ -21,27 +21,28 @@ FactoryBot.define do
     arc16_id  { 16 }
     arc17_id  { 17 }
     arc18_id  { 18 }
-    arc19_id  { 18 }
+    arc19_id  { 19 }
     arc20_id  { 20 }
     mons1_id  { 22 }
-    mons2_id  { 22 }
-    mons3_id  { 22 }
-    mons4_id  { 22 }
-    mons5_id  { 22 }
-    mons6_id  { 23 }
-    mons7_id  { 23 }
-    mons8_id  { 23 }
-    mons9_id  { 23 }
-    mons10_id { 23 }
-    mons11_id { 24 }
-    mons12_id { 24 }
-    mons13_id { 24 }
-    mons14_id { 24 }
-    mons15_id { 24 }
-    mons16_id { 25 }
-    mons17_id { 25 }
-    mons18_id { 25 }
-    mons19_id { 25 }
-    mons20_id { 25 }
+    mons2_id  { 23 }
+    mons3_id  { 24 }
+    mons4_id  { 25 }
+    mons5_id  { 26 }
+    mons6_id  { 27 }
+    mons7_id  { 28 }
+    mons8_id  { 29 }
+    mons9_id  { 30 }
+    mons10_id { 31 }
+    mons11_id { 32 }
+    mons12_id { 33 }
+    mons13_id { 34 }
+    mons14_id { 35 }
+    mons15_id { 36 }
+    mons16_id { 37 }
+    mons17_id { 38 }
+    mons18_id { 39 }
+    mons19_id { 40 }
+    mons20_id { 41 }
+    association :user
   end
 end
