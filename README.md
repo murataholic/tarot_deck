@@ -45,20 +45,15 @@ https://tarot-deck-for-dqx.herokuapp.com/
 
 # 実装した機能
 - タロット画像表示機能（投稿時）
-[![Image from Gyazo](https://i.gyazo.com/81a1fc4ed5c7b24c6e26c1a93362ea17.gif)](https://gyazo.com/81a1fc4ed5c7b24c6e26c1a93362ea17)  
-
+[![Image from Gyazo](https://i.gyazo.com/81a1fc4ed5c7b24c6e26c1a93362ea17.gif)](https://gyazo.com/81a1fc4ed5c7b24c6e26c1a93362ea17)
 - 投稿機能
-[![Image from Gyazo](https://i.gyazo.com/f51fc1714ea54be40d9c2de70b3c991d.gif)](https://gyazo.com/f51fc1714ea54be40d9c2de70b3c991d)  
-
-- 検索機能（ジャンル）  
-[![Image from Gyazo](https://i.gyazo.com/b2980757234f2c34f46b744bfa3e7465.gif)](https://gyazo.com/b2980757234f2c34f46b744bfa3e7465)  
-
+[![Image from Gyazo](https://i.gyazo.com/f51fc1714ea54be40d9c2de70b3c991d.gif)](https://gyazo.com/f51fc1714ea54be40d9c2de70b3c991d)
+- 検索機能（ジャンル）
+[![Image from Gyazo](https://i.gyazo.com/b2980757234f2c34f46b744bfa3e7465.gif)](https://gyazo.com/b2980757234f2c34f46b744bfa3e7465)
 - 検索機能（フリーワード）
-[![Image from Gyazo](https://i.gyazo.com/b16984419c3bfb2db24908a93c926738.gif)](https://gyazo.com/b16984419c3bfb2db24908a93c926738)  
-
+[![Image from Gyazo](https://i.gyazo.com/b16984419c3bfb2db24908a93c926738.gif)](https://gyazo.com/b16984419c3bfb2db24908a93c926738)
 - 検索機能（ユーザー名）
 [![Image from Gyazo](https://i.gyazo.com/a18efd1c487904811e916719363d3cc9.gif)](https://gyazo.com/a18efd1c487904811e916719363d3cc9)
-
 - いいね！機能
 [![Image from Gyazo](https://i.gyazo.com/d857e9de620fda4cd60f7574ae851347.gif)](https://gyazo.com/d857e9de620fda4cd60f7574ae851347)
 
