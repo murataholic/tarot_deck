@@ -55,7 +55,7 @@ https://tarot-deck-for-dqx.herokuapp.com/
 - 検索機能（ユーザー名）
 [![Image from Gyazo](https://i.gyazo.com/e9daaaed29292fbfb57d8ad742a3d663.gif)](https://gyazo.com/e9daaaed29292fbfb57d8ad742a3d663)
 - いいね！機能
-[![Image from Gyazo](https://i.gyazo.com/d857e9de620fda4cd60f7574ae851347.gif)](https://gyazo.com/d857e9de620fda4cd60f7574ae851347)
+[![Image from Gyazo](https://i.gyazo.com/8477565ba9efcf36d9ff5342548dc340.gif)](https://gyazo.com/8477565ba9efcf36d9ff5342548dc340)
 
 # 工夫した機能
 - タロット画像をデータベースに保存せずに、画像を表示させている点
