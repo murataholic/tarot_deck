@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
 
   def search_result
     @articles = if params[:genre_id].present?
-                  Genre.find(params[:genre_id]).articles
+                  Genre.find(params[:genre_id]).articles.order('created_at DESC')
                 else
                   Article.search(params[:keyword])
                 end
@@ -53,7 +53,7 @@ class ArticlesController < ApplicationController
 
   def my_page
     @user = User.find(params[:user_id])
-    @articles = User.find(params[:user_id]).articles
+    @articles = User.find(params[:user_id]).articles.order('created_at DESC')
   end
 
   private

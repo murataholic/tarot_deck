@@ -101,7 +101,7 @@ class Article < ApplicationRecord
 
   def self.search(search)
     if search != ''
-      Article.where('text LIKE(?)', "%#{search}%")
+      Article.where('text LIKE(?)', "%#{search}%").order('created_at DESC')
     else
       Article.includes(:user).order('created_at DESC')
     end
