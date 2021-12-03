@@ -1,9 +1,10 @@
 <%= render 'shared/header' %>
 
 <div class="article-lists">
-  <% @articles.each do |article| %>
-    <%= render partial: "shared/article_content", locals: { article: article } %>
-  <% end %>
+  <%= render 'shared/search_form' %>
+  <%# @articles.each do |article| %>
+    <%#= render partial: "shared/article_content", locals: { article: article } %>
+  <%# end %>
 </div>
 
 <%= render 'shared/footer' %>

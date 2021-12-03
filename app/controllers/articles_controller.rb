@@ -1,10 +1,10 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :set_genre, only: [:search, :search_result]
+  before_action :set_genre, only: [:index, :search, :search_result]
   before_action :set_time, only: [:index, :show, :search_result, :my_page]
   def index
-    @articles = Article.includes(:user).order('created_at DESC')
+    # @articles = Article.includes(:user).order('created_at DESC')
   end
 
   def new
